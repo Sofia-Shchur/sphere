@@ -1,0 +1,62 @@
+#sphere {
+    background-color: #0612dc;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
+    border-radius: 100px;
+    box-shadow: inset -10px -10px 100px #000, 10px 10px 20px black, inset 0px 0px 10px black;
+}
+
+#sphereInside {
+    background-color: #ffffff;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+    border-radius: 100px;
+    z-index: 1;
+    border: 1px solid black;
+}
+
+
+#answer {
+    position: relative;
+    text-align: center;
+    top: 40px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#btnReload {
+    position: fixed;
+    left: 47%;
+    top: 650px;
+}
+
+body {
+    background-image: url("cosmos.jpg");
+}
+
+@keyframes myanimation {
+    0%   {transform:rotateY(0deg);}
+    100% {transform:rotateY(180deg);}
+}
+
+#sphere:active {
+animation: myanimation 200ms infinite alternate linear;
+}
+
+#sphere:active + #sphereInside {
+    animation: myanimation 200ms infinite alternate linear;
+}
+
+#text {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    text-shadow: 4px 4px 4px #ffffff,
+    3px 3px 2px #000000;
+}
